@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 # React-ToDo-App
-My first react app built without following any tutorial
-=======
-# React Todo App
 
-My first React app built.
+My first react app built without following any tutorial
 
 ## Prequisites for running the app
 
@@ -35,4 +31,3 @@ My first React app built.
     ```sh
     npm run dev
     ```
->>>>>>> 95105a4 (initial commit)
