@@ -37,6 +37,14 @@ function App() {
       setTodos([newTodo, ...todos])
     }
   }
+  const currentTodos = todos.map((todo) => (
+    <TodoItem
+      key={todo.props.todoId}
+      name={todo.props.name}
+      todoId={todo.props.todoId}
+      onDelete={deleteTodo}
+    />
+  ))
 
   return (
     <>
@@ -48,15 +56,8 @@ function App() {
         </form>
 
         <section className="todos curved-grey-border">
-          {todos.map((todo) => (
-            <TodoItem
-              key={todo.props.todoId}
-              name={todo.props.name}
-              todoId={todo.props.todoId}
-              onDelete={deleteTodo}
-            />
-          ))}
-          <p>{todos.length === 0 ? 'No Todos' : ''}</p>
+          {currentTodos}
+          <p>{currentTodos.length === 0 ? 'No Todos' : ''}</p>
         </section>
       </main>
     </>
